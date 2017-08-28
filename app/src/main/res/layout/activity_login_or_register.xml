@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="happyhappyinc.developer.incubeapp.activities.LoginOrRegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/logo_happy" />
+
+        <TextView
+            android:id="@+id/tv_slogan"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Lo que \nquieres\ncon lo que\ntienes"
+            android:layout_alignLeft="@+id/iv_logo"
+            android:layout_alignRight="@id/iv_logo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="32sp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_above="@+id/btn_register_user"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="65dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginStart="65dp"
+            android:background="@drawable/btn_green_consolidate_background"
+            android:onClick="signin"
+            android:padding="14dp"
+            android:text="@string/str_btn_login"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_register_user"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btn_login"
+            android:layout_alignLeft="@+id/btn_login"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btn_login"
+            android:onClick="signup"
+            android:layout_alignStart="@+id/btn_login"
+            android:textAllCaps="true"
+            android:layout_marginBottom="35dp"
+            android:text="@string/str_register"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

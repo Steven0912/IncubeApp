@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/nsv_scroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_your_especiality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="Tu Especialidad"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_description_especiality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_your_especiality"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:text="asasdasdasdasdasdasdaasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdsdasdas"
+                android:textAlignment="center" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_container_food"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/tv_description_especiality"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorOrangeFood">
+
+                <TextView
+                    android:id="@+id/tv_category_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:text="Comida"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_category_food"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_category_food"
+                    android:layout_marginRight="50dp"
+                    android:text="lorepm ipsum dolor"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_container_juice"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/rl_container_food"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGreenJuice">
+
+                <TextView
+                    android:id="@+id/tv_category_juice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:text="Jugos"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_category_juice"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_category_juice"
+                    android:layout_marginRight="50dp"
+                    android:text="lorepm ipsum dolor"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_container_snaks"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/rl_container_juice"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPinkSnacks">
+
+                <TextView
+                    android:id="@+id/tv_category_snaks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="50dp"
+                    android:text="Snacks"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_category_snaks"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_category_snaks"
+                    android:layout_marginRight="50dp"
+                    android:text="lorepm ipsum dolor"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

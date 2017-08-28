@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IncubeApp</string>
+    <string name="str_mail">Correo</string>
+    <string name="str_password">Contraseña</string>
+    <string name="str_btn_login">I n i c i a r   S e s i ó n</string>
+    <string name="str_forget_pass">¿Olvidaste tu contraseña?</string>
+    <string name="str_register">Registrarse</string>
+</resources>
