@@ -22,14 +22,15 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
-
-        mContext = this;
 
         // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
+
+        setContentView(R.layout.activity_splash_screen);
+
+        mContext = this;
 
         ImageView imageView = (ImageView) findViewById(R.id.iv_icon_happy);
         new Utils().loadSVG(mContext, R.raw.icon_happy, imageView);

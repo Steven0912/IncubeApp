@@ -23,12 +23,9 @@
         <activity android:name=".activities.LoginOrRegisterActivity" />
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.ClientOrAsocciateActivity">
-
-        </activity>
-        <activity android:name=".activities.WizardAssociateActivity">
-
-        </activity>
+        <activity android:name=".activities.ClientOrAsocciateActivity"></activity>
+        <activity android:name=".activities.WizardAssociateActivity"></activity>
+        <activity android:name=".activities.WebViewActivity"></activity>
     </application>
 
 </manifest>
