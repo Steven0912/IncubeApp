@@ -12,6 +12,7 @@ import happyhappyinc.developer.incubeapp.preferences.PreferencesManager;
  */
 
 public class FCMInstanceIdService extends FirebaseInstanceIdService {
+
     public static String mRefreshedToken = "";
 
     @Override

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 
@@ -21,6 +20,7 @@ import happyhappyinc.developer.incubeapp.activities.MainActivity;
  */
 
 public class FCMService extends FirebaseMessagingService {
+
     private String[] datas;
 
     @Override
@@ -47,39 +47,26 @@ public class FCMService extends FirebaseMessagingService {
         String titulo = remoteMessage.getNotification().getTitle();
         String texto = remoteMessage.getNotification().getBody();
 
-
         datas = titulo.split("|");
         showNotification(titulo, texto);
-        //mensaje();
-        //mensajeSinPedido();
-    }
-
-    private void mensajeSinPedido() {
-        /*Intent i = new Intent(ChatFragment.MENSAJE);
-        LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(i);*/
-    }
-
-    private void mensaje() {
-        /*Intent i = new Intent(ChatActivity.MENSAJE);
-        LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(i);*/
     }
 
     private void showNotification(String title, String text) {
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
-
-        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this);
-        notificationBuilder.setContentIntent(pendingIntent);
         notificationBuilder.setContentText(text)
                 .setContentTitle(title)
                 .setSmallIcon(R.drawable.icon)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setVibrate(new long[]{0, 300, 200, 300})
-                .setSound(alarmSound)
                 .setAutoCancel(true);
 
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
+
+        notificationBuilder.setContentIntent(pendingIntent);
+
+        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        notificationBuilder.setSound(alarmSound);
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
