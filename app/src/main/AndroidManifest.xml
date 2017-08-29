@@ -26,6 +26,23 @@
         <activity android:name=".activities.ClientOrAsocciateActivity"></activity>
         <activity android:name=".activities.WizardAssociateActivity"></activity>
         <activity android:name=".activities.WebViewActivity"></activity>
+
+        <service
+            android:name=".services.FCMService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.FCMInstanceIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
